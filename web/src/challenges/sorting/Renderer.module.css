@@ -1,0 +1,64 @@
+.stage {
+  width: min(100cqw, 820px);
+  height: 100cqh;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.bars {
+  position: relative;
+  flex: 1;
+  min-height: 140px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.slot {
+  position: absolute;
+  inset: 0 auto 0 0;
+  padding: 0 3px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 220ms cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+.bar {
+  width: 100%;
+  background: var(--surface-4);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: background-color 160ms ease, height 160ms ease;
+}
+.bar span {
+  font: 600 11px var(--font-mono);
+  color: var(--text-muted);
+  padding-top: 4px;
+}
+.comparing {
+  background: var(--warning);
+}
+.swapped {
+  background: var(--accent);
+}
+.sorted {
+  background: var(--success);
+}
+.comparing span,
+.swapped span,
+.sorted span {
+  color: #0b0d12;
+}
+.stats {
+  display: flex;
+  gap: var(--space-5);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.stats b {
+  color: var(--text);
+  font-family: var(--font-mono);
+  margin-left: 4px;
+}

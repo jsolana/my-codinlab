@@ -1,0 +1,52 @@
+.board {
+  position: relative;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
+}
+.wall {
+  position: absolute;
+  background: var(--surface-3);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.player,
+.goal {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+.player {
+  transition: left 140ms ease, top 140ms ease;
+  z-index: 2;
+}
+.player span {
+  width: 62%;
+  height: 62%;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.goal span {
+  width: 56%;
+  height: 56%;
+  border-radius: 3px;
+  background: var(--success);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--success) 60%, transparent);
+}
+.bump {
+  position: absolute;
+  background: color-mix(in srgb, var(--danger) 55%, transparent);
+  border-radius: 2px;
+  animation: flash 360ms ease-out forwards;
+}
+@keyframes flash {
+  to {
+    opacity: 0;
+  }
+}
