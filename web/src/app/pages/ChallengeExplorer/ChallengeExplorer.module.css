@@ -1,0 +1,19 @@
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5);
+}
+.hero {
+  margin-bottom: var(--space-5);
+  max-width: 620px;
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.hero p {
+  margin-top: var(--space-3);
+  color: var(--text-muted);
+  font-size: 16px;
+}

@@ -1,0 +1,33 @@
+.root {
+  position: relative;
+}
+.track {
+  display: flex;
+  gap: var(--space-5);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: var(--space-4) var(--space-1) var(--space-5);
+  scrollbar-width: none;
+}
+.track::-webkit-scrollbar {
+  display: none;
+}
+.controls {
+  display: flex;
+  gap: var(--space-2);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+.count {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.arrow {
+  width: 36px;
+  padding: 0;
+}

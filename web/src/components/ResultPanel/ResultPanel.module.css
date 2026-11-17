@@ -1,0 +1,55 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-top: 1px solid var(--border);
+  background: var(--surface-1);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: 12px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+.status {
+  font-weight: 600;
+}
+.success {
+  color: var(--success);
+}
+.failure {
+  color: var(--danger);
+}
+.running {
+  color: var(--accent-strong);
+}
+.log {
+  flex: 1;
+  min-height: 80px;
+  max-height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  font: 12px/1.6 var(--font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.empty {
+  color: var(--text-faint);
+}
+.stdout {
+  color: var(--text);
+}
+.stderr,
+.error {
+  color: var(--danger);
+}
+.info {
+  color: var(--text-muted);
+}
+.successLine {
+  color: var(--success);
+}

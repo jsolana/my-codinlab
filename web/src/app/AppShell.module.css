@@ -1,0 +1,33 @@
+.shell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: 56px;
+  flex: none;
+  padding: 0 var(--space-5);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(8px);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.brand svg {
+  color: var(--accent);
+}
+.main {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
